@@ -57,7 +57,7 @@ class BlackJackCardHolder {
 	
 	//produce a string with the first card hidden
 	def baseGetHiddenHand() : String = {
-		var result : String = "\t" + "(hidden)\n";
+		var result : String = "\t" + "(hidden card)\n";
 		var toggle : Boolean = false;			//used to skip the first card...
 		for(card <- hand) {
 			if(!toggle){

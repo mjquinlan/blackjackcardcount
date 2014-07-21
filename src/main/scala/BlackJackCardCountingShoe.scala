@@ -7,9 +7,15 @@ class BlackJackCardCountingShoe(ndecks : Int) extends BlackJackCardShoe(ndecks) 
 	private var countHiLo : Int = 0;
 	private var countZen : Int = 0;
 	
+	private var suppressPrintOnInit = true;
+	
 	override def shuffle() = {
 		super.shuffle()
-		println("The dealer has re-shuffled the shoe. Resetting the counts. Reconsider your play!")
+		if(!suppressPrintOnInit) {
+			println("The dealer has re-shuffled the shoe. Resetting the counts. Reconsider your play!")
+		}else{
+			suppressPrintOnInit=false;
+		}
 		countHiLo = 0;
 		countZen = 0;
 	}

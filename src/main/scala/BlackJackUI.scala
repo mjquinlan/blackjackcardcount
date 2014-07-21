@@ -12,7 +12,8 @@ object BlackJackUI {
 		println("Welcome to the game!")
 		println(" You start with "+starting_chips+" chips and must bet at least one each round.")
 		println(" The dealer will stay at 17. Card counting is supported and encouraged!")
-		println(" Please provide input as suggested in [], followed by a return key.")
+		println(" Please provide input as suggested in [], followed by a return key. ENTRIES ARE NOT ECHOed.")
+		println(" See http://en.wikipedia.org/wiki/Card_counting for a description of the HiLo and Zen models.")
 		println(" ")
 		
 		//Request user input on the number of decks
@@ -72,12 +73,12 @@ object BlackJackUI {
 		
 		//Check the dealer for blackjack
 		if(dealer.computeScore()==21) {
-			println("Dealer has blackjack.")
+			println("\nDealer has blackjack.\n")
 			player.flushCards()
 			dealer.flushCards()
 			return
 		}
-		println(dealer.getHiddenHand())
+		println("\n"+dealer.getHiddenHand())
 		
 		//Ask user for hit/stand
 		println(player.getHand())
@@ -89,7 +90,7 @@ object BlackJackUI {
 			}else{
 				ok=false
 			}
-			println(player.getHand())
+			if(ok || player.computeScore()>21) println("\n"+player.getHand())
 		}
 		if(player.computeScore()>21){
 			println("Bust!")
