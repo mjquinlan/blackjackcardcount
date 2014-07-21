@@ -5,7 +5,7 @@ import scala.collection.mutable.HashSet
 import blackjackcardcount.BlackJackCardCountingShoe
 import blackjackcardcount.BlackJackPlayingCard
 
-class TestBlackJackCardHolder extends FlatSpec {
+class TestBlackJackCountingShoe extends FlatSpec {
 	
 	"The shoe" should "continuously return cards when the end is reached" in {
 		val testshoe : BlackJackCardCountingShoe = new BlackJackCardCountingShoe(1);
