@@ -12,7 +12,7 @@ object BlackJackUI {
 		println("Welcome to the game!")
 		println(" You start with "+starting_chips+" chips and must bet at least one each round.")
 		println(" The dealer will stay at 17. Card counting is supported and encouraged!")
-		println(" Please provide input as suggested in [], followed by a return key. ENTRIES ARE NOT ECHOed.")
+		println(" Please provide input as suggested in [], followed by a return key.")
 		println(" See http://en.wikipedia.org/wiki/Card_counting for a description of the HiLo and Zen models.")
 		println(" ")
 		
