@@ -9,14 +9,24 @@ The game can be compiled, tested and run using the Scala Simple Build Tool (sbt)
 1. _Compile the source:_
  
         $ sbt package
-	$
+	
 
 2. _Run tests:_
 
         $ sbt test
-	$
+	
 
-3. _Play the game:_
+3. _Launch the game:_
 
-	$ sbt run
-	$
+        $ sbt run
+	
+
+##Game Rules
+You start with 100 chips and must bet at least one each round.
+
+The dealer will hit any hand below 17 and stay when the hand is 17 or above. 
+
+Card counting is supported and encouraged! 
+See http://en.wikipedia.org/wiki/Card_counting for a description of the HiLo and Zen models.
+
+CONSOLE ENTRIES ARE NOT ECHOed!
